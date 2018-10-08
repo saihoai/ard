@@ -178,7 +178,7 @@ Version: 1.0
         function sectionimage(anchorLink, index){
             var 
                 lb = $( '[data-menuanchor="' + anchorLink + '"] img' ).attr( 'src' ),
-                r = $( '.ms-right .ms-section' ).eq(index),
+                r = $( '.ms-right .ms-section[data-anchor="' + anchorLink + '"]' ),
                 rb = r.attr( 'data-img' )
             ;
 
