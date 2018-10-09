@@ -236,9 +236,9 @@ Version: 1.0
                     if( $(window).width() >= 991 )
                     {
                         var 
-                            r = a.find( '.bgright img' ).attr( 'src' ),
+                            r = a.find( '.bgright img' ).attr( 'src' ).replace( '//', location.origin + '/' ),
                             rpa = a.closest( '[data-anchor]' ),
-                            l = a.find( '.bgleft img' ).attr( 'src' ),
+                            l = a.find( '.bgleft img' ).attr( 'src' ).replace( '//', location.origin + '/' ),
                             lpa = $( '.ms-left [data-anchor="' + rpa.attr( 'data-anchor' ) + '"]' )
                         ;
 
