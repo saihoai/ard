@@ -103,10 +103,12 @@ Version: 1.0
             }
         } else{
 
-            // CACHE: BACKGROUND IMAGE
+            // CACHE: BACKGROUND
+           var sectionsColor = [];
             $( '.sp-page-builder .page-content .ms-section' ).each( function() {
                 var e = $( this );
                 e.attr( 'data-img', e.css( 'background-image' ).replace(/url\("|"\)|url\('|'\)/g, '') );
+                sectionsColor.push( e.css( 'background-color' ) );
             } );
 
         //MULTISCROLL
@@ -116,7 +118,7 @@ Version: 1.0
         } );
         
         $('#main-container').multiscroll({
-            sectionsColor: ['white','white','white','white','white','white'],
+            sectionsColor: sectionsColor,
             anchors: ars,
             easing:'easeInOutCubic',
             menu:'.menu-left',
